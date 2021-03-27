@@ -61,7 +61,8 @@ body,
   z-index: 9999;
   font-size: 130%;
   background-color: white;
-  animation: var(--loading-duration) forwards loadingAni;
+  animation: var(--loading-duration) calc(var(--loading-duration) - 1s) forwards
+    loadingAni;
 }
 @keyframes loadingAni {
   0% {
