@@ -33,11 +33,12 @@
   --scroll-height: 50px;
   /* other */
   --duration: 300ms;
+  --loading-duration: 3s;
+  --homeAni-duration: 2s;
 }
 
 html,
 body,
-.wrap,
 .main {
   height: 100%;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
@@ -45,6 +46,32 @@ body,
 
 .hide {
   display: none;
+}
+
+/* loading */
+.loading {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  font-size: 130%;
+  background-color: white;
+  animation: var(--loading-duration) forwards loadingAni;
+}
+@keyframes loadingAni {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* header */
@@ -58,7 +85,7 @@ body,
   right: 0;
   padding: var(--header-padding);
   background-color: var(--custom-white);
-  z-index: 9999;
+  z-index: 9998;
 }
 .header__title {
   font-size: 1.5rem;
@@ -130,7 +157,8 @@ body,
   color: var(--title-black);
   font-size: 1.5rem;
   text-align: center;
-  animation: 3s forwards homeAni;
+  opacity: 0;
+  animation: var(--homeAni-duration) var(--loading-duration) forwards homeAni;
 }
 .home--title::after {
   content: "";
@@ -144,7 +172,7 @@ body,
   display: flex;
   color: rgba(51, 48, 0, 0.8);
   opacity: 0;
-  animation: 3s 1s forwards homeAni;
+  animation: 3s calc(var(--loading-duration) + 1s) forwards homeAni;
 }
 @keyframes homeAni {
   0% {
@@ -170,7 +198,9 @@ body,
   bottom: 0;
   left: 0;
   right: 0;
-  animation: 3s ease-in-out 3s infinite alternate subAni;
+  font-weight: 500;
+  animation: var(--homeAni-duration) ease-in-out var(--homeAni-duration)
+    infinite alternate subAni;
 }
 @keyframes subAni {
   0% {
