@@ -33,7 +33,7 @@
   --scroll-height: 50px;
   /* other */
   --duration: 300ms;
-  --loading-duration: 3s;
+  --loading-duration: 4s;
   --homeAni-duration: 2s;
 }
 
@@ -67,14 +67,28 @@ body,
 @keyframes loadingAni {
   0% {
     opacity: 1;
-    visibility: visible;
   }
   100% {
     opacity: 0;
     visibility: hidden;
   }
 }
-
+.loading-text {
+  position: relative;
+  transform: translateY(-40px);
+  animation: loadingTextAni ease-in-out 1s alternate infinite;
+}
+@keyframes loadingTextAni {
+  0% {
+    opacity: 1;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(0px);
+  }
+}
 /* header */
 .header {
   position: fixed;
