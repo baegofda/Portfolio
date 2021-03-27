@@ -36,7 +36,9 @@
 }
 
 html,
-body {
+body,
+.wrap,
+.main {
   height: 100%;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
 }
@@ -110,11 +112,6 @@ body {
   opacity: 1;
 }
 
-/* main */
-.wrap {
-  height: 100%;
-}
-
 /* home */
 #home {
   position: relative;
@@ -133,6 +130,7 @@ body {
   color: var(--title-black);
   font-size: 1.5rem;
   text-align: center;
+  animation: 3s forwards homeAni;
 }
 .home--title::after {
   content: "";
@@ -145,6 +143,18 @@ body {
 .home__desc {
   display: flex;
   color: rgba(51, 48, 0, 0.8);
+  opacity: 0;
+  animation: 3s 1s forwards homeAni;
+}
+@keyframes homeAni {
+  0% {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .home__sub {
   position: relative;
