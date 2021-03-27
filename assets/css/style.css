@@ -1,3 +1,4 @@
+/* fonts css */
 @font-face {
   font-family: "Spoqa Han Sans Neo";
   font-weight: 700;
@@ -25,5 +26,29 @@
 
 html,
 body {
+  height: 100%;
   font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+.headaer__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.headaer__title--link {
+  display: inline-block;
+}
+.header__container--items {
+  display: flex;
+  align-items: center;
+}
+.header__container--items__item:not(:last-child) {
+  margin-right: 20px;
 }
