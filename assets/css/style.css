@@ -143,6 +143,7 @@ body,
   display: inline-block;
   width: 100%;
   padding: var(--header-padding) 0;
+  letter-spacing: 0.1em;
   border-style: solid;
   border-width: 1px 0;
   border-color: transparent;
