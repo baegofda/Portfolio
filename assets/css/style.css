@@ -32,11 +32,15 @@
   --color-white: #fcfcfc;
   --color-black: #333;
   --color-black-sub: rgba(51, 48, 0, 0.8);
-
+  --color-underline: #369fff;
   /* size */
-  --size-padding-header: 20px;
+  --size-width-underline: 30px;
   --size-height-scroll: 50px;
+  --size-height-underline: 1px;
   --size-margin-about: 20px;
+  --size-margin-underline: 10px;
+  --size-padding-header: 20px;
+  --size-padding-section: 60px 30px;
   --size-radius-ico: 8px;
   /* other */
   --other-duration: 300ms;
@@ -281,13 +285,12 @@ body {
   }
 }
 
-/* About Me */
+/* about me */
 #about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 60px 30px;
-  background-color: var(--color-white);
+  padding: var(--size-padding-section);
 }
 .about-intro,
 .about-skils {
@@ -309,10 +312,10 @@ body {
 .about-skils--title::after {
   content: "";
   display: inline-block;
-  width: 30px;
-  height: 1px;
-  margin-top: 10px;
-  background-color: #369fff;
+  width: var(--size-width-underline);
+  height: var(--size-height-underline);
+  margin-top: var(--size-margin-underline);
+  background-color: var(--color-underline);
 }
 .about-intro--title::after {
   margin-left: auto;
@@ -406,10 +409,58 @@ body {
 }
 
 /* portfolio */
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--size-padding-section);
+  background-color: var(--color-white);
+}
+.portfolio--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--size-margin-about);
+  color: var(--color-black);
+  font-size: var(--font-title);
+}
+.portfolio--title::after {
+  content: "";
+  display: inline-block;
+  width: var(--size-width-underline);
+  height: var(--size-height-underline);
+  margin-top: var(--size-margin-underline);
+  margin-right: auto;
+  background-color: var(--color-underline);
+}
 
+/* contact me */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--size-padding-section);
+}
+.contact--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--size-margin-about);
+  color: var(--color-black);
+  font-size: var(--font-title);
+}
+.contact--title::after {
+  content: "";
+  display: inline-block;
+  width: var(--size-width-underline);
+  height: var(--size-height-underline);
+  margin-top: var(--size-margin-underline);
+  margin-left: auto;
+  background-color: var(--color-underline);
+}
 /* tablet */
 @media all and (min-width: 768px) and (max-width: 1023px) {
-  /* About Me */
+  /* about me */
   .about-intro,
   .about-skils {
     max-width: 80%;
@@ -444,7 +495,7 @@ body {
     border-width: 1px;
   }
 
-  /* About Me */
+  /* about me */
   .about-intro,
   .about-skils {
     max-width: 45%;
