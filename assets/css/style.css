@@ -187,7 +187,8 @@ body,
   display: flex;
   color: rgba(51, 48, 0, 0.8);
   opacity: 0;
-  animation: 3s calc(var(--loading-duration) + 1s) forwards homeAni;
+  animation: var(--homeAni-duration) calc(var(--loading-duration) + 1s) forwards
+    homeAni;
 }
 @keyframes homeAni {
   0% {
@@ -214,8 +215,7 @@ body,
   left: 0;
   right: 0;
   font-weight: 500;
-  animation: var(--homeAni-duration) ease-in-out var(--homeAni-duration)
-    infinite alternate subAni;
+  animation: 4s ease-in-out 4s infinite alternate subAni;
 }
 @keyframes subAni {
   0% {
@@ -254,7 +254,7 @@ body,
 .home__scroll::after {
   top: calc(var(--scroll-height) * -1);
   background-color: rgba(155, 155, 155, 0.9);
-  animation: 3s infinite scrollAni;
+  animation: 2s infinite scrollAni;
 }
 @keyframes scrollAni {
   0% {
