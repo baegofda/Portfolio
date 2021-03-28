@@ -46,6 +46,7 @@
   --other-duration: 300ms;
   --other-duration-loading: 4s;
   --other-duration-homeAni: 2s;
+  --other-boxshadow-inset: inset 0 -4px 0 #d9fcdb;
 }
 
 * {
@@ -220,7 +221,7 @@ body {
   position: relative;
   width: 110px;
   text-align: center;
-  box-shadow: inset 0 -4px 0 #d9fcdb;
+  box-shadow: var(--other-boxshadow-inset);
   overflow: hidden;
 }
 .home__sub--contents {
@@ -457,6 +458,13 @@ body {
   margin-top: var(--size-margin-underline);
   margin-left: auto;
   background-color: var(--color-underline);
+}
+.contact--info {
+  font-size: var(--font-sub);
+  line-height: 2;
+}
+.contact--link {
+  box-shadow: var(--other-boxshadow-inset);
 }
 /* tablet */
 @media all and (min-width: 768px) and (max-width: 1023px) {
