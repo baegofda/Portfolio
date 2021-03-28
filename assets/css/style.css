@@ -460,8 +460,11 @@ body {
   background-color: var(--color-underline);
 }
 .contact--info {
-  font-size: var(--font-sub);
   line-height: 2;
+}
+.contact--info:last-child {
+  font-size: var(--font-sub);
+  text-align: center;
 }
 .contact--link {
   box-shadow: var(--other-boxshadow-inset);
