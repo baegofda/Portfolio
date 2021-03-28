@@ -1,5 +1,6 @@
 const gnb = document.querySelector(".gnb");
 const navItems = document.querySelectorAll(".header__container--items__item");
+
 gnb.addEventListener("click", () => {
   const menuBtn = document.querySelector(".gnb-menu");
   const closeBtn = document.querySelector(".gnb-close");

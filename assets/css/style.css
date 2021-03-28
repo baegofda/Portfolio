@@ -25,9 +25,13 @@
 }
 
 :root {
+  /* font */
+  --font-title: 1.5rem;
+  --font-content: 0.875rem;
   /* color */
   --custom-white: #fcfcfc;
   --title-black: #333;
+  --sub-black: rgba(51, 48, 0, 0.8);
   /* size */
   --header-padding: 20px;
   --scroll-height: 50px;
@@ -50,7 +54,7 @@ body,
 
 /* loading */
 .loading {
-  position: absolute;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +107,7 @@ body,
   z-index: 9998;
 }
 .header__title {
-  font-size: 1.5rem;
+  font-size: var(--font-title);
   font-weight: 500;
   line-height: 1.5;
   opacity: 0.7;
@@ -171,7 +175,7 @@ body,
   flex-direction: column;
   align-items: center;
   color: var(--title-black);
-  font-size: 1.5rem;
+  font-size: var(--font-title);
   text-align: center;
   opacity: 0;
   animation: var(--homeAni-duration) var(--loading-duration) forwards homeAni;
@@ -186,7 +190,7 @@ body,
 }
 .home__desc {
   display: flex;
-  color: rgba(51, 48, 0, 0.8);
+  color: var(--sub-black);
   opacity: 0;
   animation: var(--homeAni-duration) calc(var(--loading-duration) + 1s) forwards
     homeAni;
@@ -270,6 +274,65 @@ body,
   }
 }
 
+/* About Me */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+.about-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.about-intro--title,
+.about-skils--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  color: var(--title-black);
+  font-size: var(--font-title);
+}
+.about-intro--title::after,
+.about-skils--title::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #369fff;
+}
+.about-intro--title::after {
+  margin-left: auto;
+}
+.about-intro__container--info {
+  padding: 20px 0;
+  color: var(--sub-black);
+  text-align: center;
+}
+.about-intro__container--content,
+.about-intro__container--info,
+.about-skils--content {
+  font-size: var(--font-content);
+  line-height: 1.5;
+}
+.about-skils {
+  width: 100%;
+}
+.about-skils--content {
+  display: flex;
+  align-items: center;
+}
+.about-skils--category {
+  flex: 1;
+}
+.about-skils--tool {
+  flex: 2;
+}
 /* tablet */
 @media all and (min-width: 768px) and (max-width: 1023px) {
 }
