@@ -14,4 +14,12 @@
 
 <br/>
 
-&nbsp;항상 노력하고 성장하고 싶은 주니어 개발자입니다.
+스터디를 통하여 정보 공유도하는
+
+<br/>
+
+<p align="center"><img src="https://blog.kakaocdn.net/dn/cI3fRE/btq1ca3vlRE/22FDq7OVQpH0oThAMCgKyk/img.gif"/></p>
+
+<br/>
+
+항상 노력하고 성장하고 싶은 주니어 개발자입니다.
