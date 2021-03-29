@@ -495,14 +495,15 @@ body {
   content: "";
   width: var(--font-sub);
   height: var(--font-sub);
+
   margin-top: 1px;
   margin-right: 3px;
 }
 .portfolio__project__contents__links--link:nth-child(1)::before {
-  background: url("/assets/icons/code-line.svg") center/cover;
+  background: url("../icons/code-line.svg") center/cover;
 }
 .portfolio__project__contents__links--link:nth-child(2)::before {
-  background: url("/assets/icons/link.svg") center/cover;
+  background: url("../icons/link.svg") center/cover;
 }
 .inline {
   box-shadow: var(--other-boxshadow-inset);
