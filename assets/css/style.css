@@ -40,13 +40,15 @@
   --size-margin-about: 20px;
   --size-margin-underline: 10px;
   --size-padding-header: 20px;
-  --size-padding-section: 60px 30px;
+  --size-padding-section-vertical: 60px;
+  --size-padding-section-horizon: 30px;
   --size-radius-ico: 8px;
   /* other */
   --other-duration: 300ms;
   --other-duration-loading: 4s;
   --other-duration-homeAni: 2s;
   --other-boxshadow-inset: inset 0 -4px 0 #d9fcdb;
+  --other-boxshadow-link: inset 0 -4px 0 #a1d2ff;
 }
 
 * {
@@ -291,7 +293,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--size-padding-section);
+  padding: var(--size-padding-section-vertical)
+    var(--size-padding-section-horizon);
 }
 .about-intro,
 .about-skils {
@@ -414,7 +417,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--size-padding-section);
+  padding: var(--size-padding-section-vertical)
+    var(--size-padding-section-horizon);
   background-color: var(--color-white);
 }
 .portfolio--title {
@@ -434,13 +438,83 @@ body {
   margin-right: auto;
   background-color: var(--color-underline);
 }
+.portfolio__project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+.portfolio__project:not(:last-child) {
+  margin-bottom: 30px;
+}
+.portfolio__project--title {
+  margin-bottom: 20px;
+  font-size: 1.25rem;
+}
+.portfolio__project__contents {
+  width: 100%;
+}
+.portfolio__project__contents--img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.portfolio__project__contents__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-sub);
+  line-height: 1.5;
+}
+.portfolio__project__contents__content--desc {
+  margin-bottom: 20px;
+}
+.portfolio__project__contents__content--link,
+.portfolio__project__contents__links--link {
+  box-shadow: var(--other-boxshadow-link);
+  transition: background-color var(--other-duration) ease-in-out;
+}
+.portfolio__project__contents__content--link:hover,
+.portfolio__project__contents__links--link:hover {
+  background-color: #a1d2ff;
+}
+.portfolio__project__contents__links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.portfolio__project__contents__links--link {
+  display: flex;
+  align-items: center;
+}
+.portfolio__project__contents__links--link:nth-child(1) {
+  margin-right: 10px;
+}
+.portfolio__project__contents__links--link:nth-child(1)::before,
+.portfolio__project__contents__links--link:nth-child(2)::before {
+  content: "";
+  width: var(--font-sub);
+  height: var(--font-sub);
+  margin-top: 1px;
+  margin-right: 3px;
+}
+.portfolio__project__contents__links--link:nth-child(1)::before {
+  background: url("/assets/icons/code-line.svg") center/cover;
+}
+.portfolio__project__contents__links--link:nth-child(2)::before {
+  background: url("/assets/icons/link.svg") center/cover;
+}
+.inline {
+  box-shadow: var(--other-boxshadow-inset);
+}
 
 /* contact me */
 #contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: var(--size-padding-section);
+  padding: var(--size-padding-section-vertical)
+    var(--size-padding-section-horizon);
 }
 .contact--title {
   display: flex;
@@ -469,11 +543,19 @@ body {
 .contact--link {
   box-shadow: var(--other-boxshadow-inset);
 }
+
 /* tablet */
 @media all and (min-width: 768px) and (max-width: 1023px) {
+  #about,
+  #portfolio,
+  #contact {
+    padding: var(--size-padding-section-vertical) 0;
+  }
+
   /* about me */
   .about-intro,
-  .about-skils {
+  .about-skils,
+  .portfolio__project {
     max-width: 80%;
   }
 }
@@ -506,9 +588,15 @@ body {
     border-width: 1px;
   }
 
+  #about,
+  #portfolio,
+  #contact {
+    padding: var(--size-padding-section-vertical) 0;
+  }
   /* about me */
   .about-intro,
-  .about-skils {
+  .about-skils,
+  .portfolio__project {
     max-width: 45%;
   }
 }
