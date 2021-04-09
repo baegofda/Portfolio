@@ -51,10 +51,6 @@
   --other-boxshadow-link: inset 0 -4px 0 #a1d2ff;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 html,
 body {
   height: 100%;
