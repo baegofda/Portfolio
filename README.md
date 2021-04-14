@@ -2,6 +2,18 @@
 
 <br/>
 
+<p align="center"><img src="assets/images/portfolio.gif"/></p>
+
+<br/>
+
+> [포트폴리오 보러가기](https://baegofda.github.io/Portfolio/ "이준호의 포트폴리오")
+
+<br/>
+
+저는
+
+<br/>
+
 꾸준히 성장하며 [깃허브 보러가기](https://github.com/baegofda "이준호의 Github")
 
 <br/>
