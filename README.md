@@ -2,7 +2,7 @@
 
 <br/>
 
-<p align="center"><img src="assets/images/portfolio.gif"/></p>
+<p align="center"><img src="assets/images/portfolio-optimize.gif"/></p>
 
 <br/>
 
