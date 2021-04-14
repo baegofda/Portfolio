@@ -51,6 +51,15 @@
   --other-boxshadow-link: inset 0 -4px 0 #a1d2ff;
 }
 
+.sr-only {
+  position: absolute;
+  z-index: -100;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
 html,
 body {
   height: 100%;
