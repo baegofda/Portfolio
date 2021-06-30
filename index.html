@@ -8,7 +8,30 @@
       name="description"
       content="프론트엔드 개발자 이준호의 포트폴리오 사이트입니다."
     />
+    <meta
+      name="keywords"
+      content="이준호, 프론트엔드, 프론트엔드 개발자, 프론트엔드 포트폴리오, 프론트엔드 개발자 포트폴리오, 개발자 포트폴리오, 웹개발, 웹개발자, 개발자 포트폴리오"
+    />
+    <meta property="og:title" content="프론트엔드 개발자 이준호의 포트폴리오" />
+    <meta
+      property="og:description"
+      content="프론트엔드 개발자 이준호의 포트폴리오 사이트입니다."
+    />
     <title>Juno's Portfolio</title>
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "url": "https://baegofda.github.io/Portfolio/",
+        "name": "프론트엔드 이준호",
+        "author": {
+          "@type": "Person",
+          "name": "Lee Jun Ho"
+        },
+        "datePublished": "2021-03-19",
+        "description": "프론트엔드 개발자 이준호의 포트폴리오 사이트입니다."
+      }
+    </script>
     <link rel="preload" href="assets/images/landing-img.jpg" as="image" />
     <link rel="preload" href="assets/images/carrot-optimize.gif" as="image" />
     <link
@@ -91,7 +114,7 @@
       </span>
       <nav class="header__container">
         <ul class="header__container--items">
-          <li class="header__container--items__item active">
+          <li class="header__container--items__item active" data-link="#home">
             <a
               class="header__container--items__item--link"
               href="#home"
@@ -99,7 +122,7 @@
               >HOME</a
             >
           </li>
-          <li class="header__container--items__item">
+          <li class="header__container--items__item" data-link="#about">
             <a
               class="header__container--items__item--link"
               href="#about"
@@ -107,7 +130,7 @@
               >ABOUT ME</a
             >
           </li>
-          <li class="header__container--items__item">
+          <li class="header__container--items__item" data-link="#portfolio">
             <a
               class="header__container--items__item--link"
               href="#portfolio"
@@ -115,7 +138,7 @@
               >PORTFOLIO</a
             >
           </li>
-          <li class="header__container--items__item">
+          <li class="header__container--items__item" data-link="#contact">
             <a
               class="header__container--items__item--link"
               href="#contact"
