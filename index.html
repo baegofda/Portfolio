@@ -36,18 +36,21 @@
         "description": "프론트엔드 개발자 이준호의 포트폴리오 사이트입니다."
       }
     </script>
+
     <link rel="preload" href="assets/images/landing-img.jpg" as="image" />
-    <link rel="preload" href="assets/images/carrot-optimize.gif" as="image" />
-    <link
-      rel="preload"
-      href="assets/images/portfolio-optimize.gif"
-      as="image"
-    />
+    <link rel="preload" href="assets/images/dalgo-optimize.gif" as="image" />
+    <link rel="preload" href="assets/images/with365-optimize.gif" as="image" />
     <link
       rel="preload"
       href="assets/images/projectGOC-optimize.gif"
       as="image"
     />
+    <link
+      rel="preload"
+      href="assets/images/portfolio-optimize.gif"
+      as="image"
+    />
+    <link rel="preload" href="assets/images/carrot-optimize.gif" as="image" />
     <link
       rel="preload"
       href="assets/images/projectMomen-optimize.gif"
@@ -177,8 +180,8 @@
           </p>
           <p class="about-intro--content">
             안녕하세요. 프론트엔드 개발자 이준호입니다.<br /><br />
-            저는 프론트엔드 개발자로 시작하고자 공부를 해오고있습니다. 지난 몇
-            년 동안 3D 프린팅분야에서 강사로 활동하였습니다.
+            저는 프론트엔드 개발자로써 뒤집기를 시작하였습니다. 지난 몇 년 동안
+            3D 프린팅분야에서 강사로 활동하였습니다.
             <br /><br />
             새로운 지식을 배우며, 타인과 함께 공유하고 성장하던 청년은 생활 속에
             좋은 영향을 끼칠 수 있는 개발자가 되고자합니다.
@@ -230,28 +233,62 @@
       <section id="portfolio">
         <h2 class="portfolio--title">PORTFOLIO</h2>
         <article class="portfolio__project">
-          <h3 class="portfolio__project--title">포트폴리오 웹사이트</h3>
+          <h3 class="portfolio__project--title">Dalgo 홈페이지 리뉴얼</h3>
           <div class="portfolio__project__contents">
             <img
               class="portfolio__project__contents--img"
-              src="assets/images/portfolio-optimize.gif"
-              alt="Portfolio Preview"
+              src="assets/images/dalgo-optimize.gif"
+              alt="dalgo Preview"
             />
             <div class="portfolio__project__contents__content">
               <p class="portfolio__project__contents__content--desc">
-                현재 방문하고계신 포트폴리오용 사이트입니다. <br />
-                <span class="inline">HTML</span>
-                과
-                <span class="inline">CSS</span>,
-                <span class="inline">Javascript</span>로 구축되었습니다.
+                홈페이지 리뉴얼을 위한 작업으로 혼자 진행하였고
+                <span class="inline">React</span>
+                와
+                <span class="inline">styled components</span>
+                를 사용하여 작업하였으며, 반응형으로 제작되었습니다.
               </p>
               <div class="portfolio__project__contents__links">
                 <a
-                  href="https://github.com/baegofda/Portfolio"
+                  href="https://www.dalgo.run/"
                   class="portfolio__project__contents__links--link"
-                  title="Portfolio 코드보기"
-                  target="blank"
-                  >View Code</a
+                  title="달고 방문하기"
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="portfolio__project">
+          <h3 class="portfolio__project--title">With365</h3>
+          <div class="portfolio__project__contents">
+            <img
+              class="portfolio__project__contents--img"
+              src="assets/images/with365-optimize.gif"
+              alt="With365 Preview"
+            />
+            <div class="portfolio__project__contents__content">
+              <p class="portfolio__project__contents__content--desc">
+                외주 개발작업이였으며
+                <span class="inline">TypeScript</span>
+                를 기반으로 프론트엔드는
+                <span class="inline">React</span>와
+                <span class="inline">Sass(scss)</span>를 사용하였고 백엔드는
+                <span class="inline">Node.js</span>환경이였으며,
+                <span class="inline">GraphQL</span>을 통한 통신을 하였습니다.
+                전반적인 UI작업을 진행하였고 관리자페이지, 폐업비용절감 API연동
+                진행을 하였습니다.
+              </p>
+              <div class="portfolio__project__contents__links">
+                <a
+                  href="https://solution.with365.co.kr/"
+                  class="portfolio__project__contents__links--link"
+                  title="동행365 방문하기"
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  >View Site</a
                 >
               </div>
             </div>
@@ -278,7 +315,8 @@
                   href="https://okky.kr/article/891152?note=2278595"
                   class="portfolio__project__contents__content--link"
                   title="okky 커뮤니티 확인하기"
-                  target="blank"
+                  target="_blank"
+                  ref="noopener noreferrer"
                   >okky 커뮤니티</a
                 >에 글을 올렸고 피드백을 통해 개발단계에서는 발견하지 못한 오류,
                 버그등을 수정 할 수 있었습니다.
@@ -288,14 +326,45 @@
                   href="https://github.com/baegofda/Project-GOC"
                   class="portfolio__project__contents__links--link"
                   title="Project GOC 코드보기"
-                  target="blank"
+                  target="_blank"
+                  ref="noopener noreferrer"
                   >View Code</a
                 ><a
                   href="https://project-goc.netlify.app/"
                   class="portfolio__project__contents__links--link"
                   title="Project GOC 방문하기"
-                  target="blank"
+                  target="_blank"
+                  ref="noopener noreferrer"
                   >View Site</a
+                >
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="portfolio__project">
+          <h3 class="portfolio__project--title">포트폴리오 웹사이트</h3>
+          <div class="portfolio__project__contents">
+            <img
+              class="portfolio__project__contents--img"
+              src="assets/images/portfolio-optimize.gif"
+              alt="Portfolio Preview"
+            />
+            <div class="portfolio__project__contents__content">
+              <p class="portfolio__project__contents__content--desc">
+                현재 방문하고계신 포트폴리오용 사이트입니다. <br />
+                <span class="inline">HTML</span>
+                과
+                <span class="inline">CSS</span>,
+                <span class="inline">Javascript</span>로 구축되었습니다.
+              </p>
+              <div class="portfolio__project__contents__links">
+                <a
+                  href="https://github.com/baegofda/Portfolio"
+                  class="portfolio__project__contents__links--link"
+                  title="Portfolio 코드보기"
+                  target="_blank"
+                  ref="noopener noreferrer"
+                  >View Code</a
                 >
               </div>
             </div>
@@ -325,13 +394,15 @@
                   href="https://github.com/baegofda/Project-Momen"
                   class="portfolio__project__contents__links--link"
                   title="Project Momen 코드보기"
-                  target="blank"
+                  target="_blank"
+                  ref="noopener noreferrer"
                   >View Code</a
                 ><a
                   href="https://baegofda.github.io/Project-Momen/"
                   class="portfolio__project__contents__links--link"
                   title="Project Momen 방문하기"
-                  target="blank"
+                  target="_blank"
+                  ref="noopener noreferrer"
                   >View Site</a
                 >
               </div>
